@@ -15,6 +15,8 @@ jobs:
         run: chmod +x ./convert.sh
       - name: Run convert.sh
         run: ls -la ./convert.sh
+      - name: Inspect changes to convert.sh
+        run: git diff convert.sh
 
       - name: Commit and push changes
         run: |
