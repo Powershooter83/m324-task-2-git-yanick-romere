@@ -6,171 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>GitHub Pages</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
+    ul.task-list{list-style: none;}
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
     div.sourceCode { margin: 1em 0; }
     pre.sourceCode { margin: 0; }
@@ -179,7 +23,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -205,7 +49,7 @@
     code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
     code span.at { color: #7d9029; } /* Attribute */
     code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
+    code span.bu { } /* BuiltIn */
     code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #4070a0; } /* Char */
     code span.cn { color: #880000; } /* Constant */
@@ -218,7 +62,7 @@
     code span.ex { } /* Extension */
     code span.fl { color: #40a070; } /* Float */
     code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.im { } /* Import */
     code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
     code span.kw { color: #007020; font-weight: bold; } /* Keyword */
     code span.op { color: #666666; } /* Operator */
@@ -236,149 +80,97 @@
 <header id="title-block-header">
 <h1 class="title">GitHub Pages</h1>
 </header>
-<h1 id="ict-m324---programmieraufgabe-2">ict-m324 - Programmieraufgabe
-2</h1>
-<h2 id="git-github-release-automatisierung">Git, GitHub, Release,
-Automatisierung</h2>
-<p>Git ist eine Software, mit der Sie Änderungen an einem Projekt im
-Laufe der Zeit verfolgen können. Ein DevOps Engineer nutzt Git täglich
-für die Arbeit an Code, Infrastruktur und Deployment-Prozessen, wodurch
-es eines der wichtigsten Tools im DevOps-Toolkit ist.</p>
+<h1 id="ict-m324---programmieraufgabe-2">ict-m324 - Programmieraufgabe 2</h1>
+<h2 id="git-github-release-automatisierung">Git, GitHub, Release, Automatisierung</h2>
+<p>Git ist eine Software, mit der Sie Änderungen an einem Projekt im Laufe der Zeit verfolgen können. Ein DevOps Engineer nutzt Git täglich für die Arbeit an Code, Infrastruktur und Deployment-Prozessen, wodurch es eines der wichtigsten Tools im DevOps-Toolkit ist.</p>
 <p>Lernziele:</p>
 <ul>
-<li>Grundlagen von Versionskontrolle, Branching, Pull Requests und
-Konfliktlösung.</li>
+<li>Grundlagen von Versionskontrolle, Branching, Pull Requests und Konfliktlösung.</li>
 <li>Erstellen von Releases und Hosting mit GitHub Pages.</li>
 <li>Automatisierung Skript schreiben</li>
 </ul>
-<h2 id="einrichtung-ihr-entwicklungs-setup">1. Einrichtung: Ihr
-Entwicklungs-Setup</h2>
-<h3 id="entwicklungsumgebung-vorbereiten">Entwicklungsumgebung
-vorbereiten</h3>
-<p>Falls Sie noch nie mit Git und GitHub gearbeitet haben. 1.
-<strong>Installieren Sie Ihre bevorzugte IDE</strong> 2.
-<strong>Installieren Sie Git</strong> 3. <strong>Erstellen Sie ein
-GitHub-Konto</strong></p>
-<h3 id="repository-erstellen-und-klonen">Repository erstellen und
-klonen</h3>
+<h2 id="einrichtung-ihr-entwicklungs-setup">1. Einrichtung: Ihr Entwicklungs-Setup</h2>
+<h3 id="entwicklungsumgebung-vorbereiten">Entwicklungsumgebung vorbereiten</h3>
+<p>Falls Sie noch nie mit Git und GitHub gearbeitet haben.</p>
+<ol type="1">
+<li><strong>Installieren Sie Ihre bevorzugte IDE</strong></li>
+<li><strong>Installieren Sie Git</strong></li>
+<li><strong>Erstellen Sie ein GitHub-Konto</strong></li>
+</ol>
+<h3 id="repository-erstellen-und-klonen">Repository erstellen und klonen</h3>
 <ul>
-<li><strong>Erstellen Sie ein neues Repository</strong>: Legen Sie ein
-neues <em>public</em> Repository auf GitHub.com an.</li>
-<li><strong>Wichtig</strong>:Der Name des Repository sollte das Wort
-<em>m324-task-2-git</em> und ihren <em>Vor- und Nachnamen</em>
-enthalten.</li>
-<li>Wählen Sie die Option “README.md” erstellen, damit es schon einen
-main Branch hat. Klonen Sie dann das Remote Repository auf Ihr lokales
-System.</li>
-<li><strong>Öffnen Sie das Repository in der IDE</strong>: Nutzen Sie
-Ihre IDE, um das geklonte Repository für die Entwicklung
-vorzubereiten.</li>
+<li><strong>Erstellen Sie ein neues Repository</strong>: Legen Sie ein neues <em>public</em> Repository auf GitHub.com an.</li>
+<li><strong>Wichtig</strong>:Der Name des Repository sollte das Wort <em>m324-task-2-git</em> und ihren <em>Vor- und Nachnamen</em> enthalten.</li>
+<li>Wählen Sie die Option “README.md” erstellen, damit es schon einen main Branch hat. Klonen Sie dann das Remote Repository auf Ihr lokales System.</li>
+<li><strong>Öffnen Sie das Repository in der IDE</strong>: Nutzen Sie Ihre IDE, um das geklonte Repository für die Entwicklung vorzubereiten.</li>
 </ul>
 <h3 id="dateien-initialisieren">Dateien initialisieren</h3>
 <ul>
-<li><strong>Erstellen Sie eine <code>index.html</code>-Datei</strong>:
-Diese Datei dient zur Demonstration grundlegender Git-Befehle. Pushen
-Sie die Datei in den main Branch.</li>
+<li><strong>Erstellen Sie eine <code>index.html</code>-Datei</strong>: Diese Datei dient zur Demonstration grundlegender Git-Befehle. Pushen Sie die Datei in den main Branch.</li>
 </ul>
 <h2 id="git-verwenden">2. Git verwenden</h2>
 <h3 id="git-befehle-ausführen">Git-Befehle ausführen</h3>
 <ul>
-<li><p>Wechseln Sie auf den main branch. Erstellen Sie einen neuen
-Branch für die Feature-Entwicklung.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> feature-branch</span></code></pre></div></li>
-<li><p>Ändern Sie index.html: Fügen Sie neuen Inhalt zur Datei
-hinzu.</p></li>
-<li><p><code>git status</code>: Überprüfen Sie den aktuellen Status des
-Repositories und identifizieren Sie unversionierte Änderungen.</p></li>
-<li><p><code>git add .</code>: Fügen Sie alle Änderungen zum
-Staging-Bereich hinzu.</p></li>
-<li><p>Committen Sie die Änderung im HTML und pushen Sie die ihren neuen
-Branch.</p></li>
-<li><p><code>git commit -m "Initial commit"</code>: Speichern Sie die
-Änderungen in der Historie des Repositories.</p></li>
-<li><p><code>git log</code>: Zeigen Sie die Commit-Historie an, um den
-Fortschritt zu überprüfen.</p></li>
-<li><p>Kontrollieren Sie auf github.com, ob ihr neuer Branch da
-ist.</p></li>
+<li><p>Wechseln Sie auf den main branch. Erstellen Sie einen neuen Branch für die Feature-Entwicklung.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">git</span> checkout -b feature-branch</span></code></pre></div></li>
+<li><p>Ändern Sie index.html: Fügen Sie neuen Inhalt zur Datei hinzu.</p></li>
+<li><p><code>git status</code>: Überprüfen Sie den aktuellen Status des Repositories und identifizieren Sie unversionierte Änderungen.</p></li>
+<li><p><code>git add .</code>: Fügen Sie alle Änderungen zum Staging-Bereich hinzu.</p></li>
+<li><p>Committen Sie die Änderung im HTML und pushen Sie die ihren neuen Branch.</p></li>
+<li><p><code>git commit -m "Initial commit"</code>: Speichern Sie die Änderungen in der Historie des Repositories.</p></li>
+<li><p><code>git log</code>: Zeigen Sie die Commit-Historie an, um den Fortschritt zu überprüfen.</p></li>
+<li><p>Kontrollieren Sie auf github.com, ob ihr neuer Branch da ist.</p></li>
 </ul>
 <h3 id="pull-request-öffnen">Pull Request öffnen</h3>
-<p>Ein Pull Request oder Merge Request bezeichnet in der
-Versionsverwaltung einen Arbeitsablauf, Quellcode-Änderungen in
-Softwareprojekten vorzunehmen.</p>
+<p>Ein Pull Request oder Merge Request bezeichnet in der Versionsverwaltung einen Arbeitsablauf, Quellcode-Änderungen in Softwareprojekten vorzunehmen.</p>
 <ul>
-<li>Wenn Sie ihren neuen Branch gepusht haben, erscheint auf der
-Startseite ihres Repositories ein Button “Compare &amp; pull request”.
-Klicken Sie auf diesen Button, um einen Pull Request zu erstellen.</li>
-<li>Erstellen Sie ein Code Review, indem Sie als Kommentar “LGTM” (Looks
-good to me) schreiben und anschliessend den Pull Request mergen. Der
-Feature Branch sollte automatisch gelöscht werden.</li>
+<li>Wenn Sie ihren neuen Branch gepusht haben, erscheint auf der Startseite ihres Repositories ein Button “Compare &amp; pull request”. Klicken Sie auf diesen Button, um einen Pull Request zu erstellen.</li>
+<li>Erstellen Sie ein Code Review, indem Sie als Kommentar “LGTM” (Looks good to me) schreiben und anschliessend den Pull Request mergen. Der Feature Branch sollte automatisch gelöscht werden.</li>
 </ul>
 <h2 id="git-merge-konflikt">3. Git Merge-Konflikt</h2>
 <h3 id="setup">Setup</h3>
 <ul>
 <li>Erstellen Sie einen neuen Branch <em>conflict-change</em></li>
 <li>Ändern Sie etwas auf der ersten Zeile im index.html</li>
-<li>Pushen Sie ihren neuen Branch und erstellen Sie einen Pull
-Request.</li>
+<li>Pushen Sie ihren neuen Branch und erstellen Sie einen Pull Request.</li>
 <li>Wechseln Sie auf den main Branch.</li>
 <li>Ändern Sie etwas auf der ersten Zeile im index.html.</li>
 <li>Pushen Sie die Änderung in den main Branch.</li>
-<li>Öffnen Sie nun ihren Pull Request für den Branch
-<em>conflict-change</em>.</li>
-<li>Unten sollte sichtbar sein, dass der Pull Request nicht gemerged
-werden kann wegen einem Konflikt.</li>
-<li>Lösen Sie den Konflikt. Mergen Sie dafür den main Branch in den
-Branch <em>conflict-change</em> (git checkout conflict-change &amp;&amp;
-git merge main). Verwenden Sie geeignete Tools wie Visual Studio.
-Beispiel hier: https://www.youtube.com/watch?v=ybCxPHzRJfA Das Resultat
-sollte sein, dass der Stand im main übernommen wird. Verwenden Sie in
-ihren Konflikt Editor, ohne den Code manuell zu ändern.</li>
+<li>Öffnen Sie nun ihren Pull Request für den Branch <em>conflict-change</em>.</li>
+<li>Unten sollte sichtbar sein, dass der Pull Request nicht gemerged werden kann wegen einem Konflikt.</li>
+<li>Lösen Sie den Konflikt. Mergen Sie dafür den main Branch in den Branch <em>conflict-change</em> (git checkout conflict-change &amp;&amp; git merge main). Verwenden Sie geeignete Tools wie Visual Studio. Beispiel hier: https://www.youtube.com/watch?v=ybCxPHzRJfA Das Resultat sollte sein, dass der Stand im main übernommen wird. Verwenden Sie in ihren Konflikt Editor, ohne den Code manuell zu ändern.</li>
 <li>Mergen Sie anschliessend den Pull Request.</li>
 </ul>
-<h2 id="release-erstellen-und-deployen">4. Release erstellen und
-deployen</h2>
+<h2 id="release-erstellen-und-deployen">4. Release erstellen und deployen</h2>
 <h3 id="release-erstellen">Release erstellen</h3>
 <ul>
-<li>Klicken Sie im Menü des Repositories auf den Reiter
-<strong>Releases</strong>.</li>
-<li>Klicken Sie auf <strong>Create a new release</strong>. Geben Sie
-eine <strong>Tag-Version</strong> ein (z.B. <code>v1.0.0</code>).
+<li>Klicken Sie im Menü des Repositories auf den Reiter <strong>Releases</strong>.</li>
+<li>Klicken Sie auf <strong>Create a new release</strong>. Geben Sie eine <strong>Tag-Version</strong> ein (z.B. <code>v1.0.0</code>).
 <ul>
-<li>Sie können auch einen Branch oder Commit auswählen, auf dem das
-Release basieren soll.</li>
+<li>Sie können auch einen Branch oder Commit auswählen, auf dem das Release basieren soll.</li>
 </ul></li>
-<li>Geben Sie einen <strong>Titel</strong> für das Release ein (z.B.
-“Erstes offizielles Release”).</li>
-<li>Fügen Sie eine <strong>Beschreibung</strong> hinzu, die die
-Änderungen oder neuen Features des Releases beschreibt.</li>
-<li>Optional: Sie können Dateien oder Builds als <strong>Assets</strong>
-zum Release hinzufügen, indem Sie sie hochladen.</li>
-<li>Klicken Sie auf <strong>Publish release</strong>, um das Release zu
-erstellen und öffentlich zu machen.</li>
+<li>Geben Sie einen <strong>Titel</strong> für das Release ein (z.B. “Erstes offizielles Release”).</li>
+<li>Fügen Sie eine <strong>Beschreibung</strong> hinzu, die die Änderungen oder neuen Features des Releases beschreibt.</li>
+<li>Optional: Sie können Dateien oder Builds als <strong>Assets</strong> zum Release hinzufügen, indem Sie sie hochladen.</li>
+<li>Klicken Sie auf <strong>Publish release</strong>, um das Release zu erstellen und öffentlich zu machen.</li>
 </ul>
-<h3 id="website-auf-github-pages-veröffentlichen">Website auf GitHub
-Pages veröffentlichen</h3>
+<h3 id="website-auf-github-pages-veröffentlichen">Website auf GitHub Pages veröffentlichen</h3>
 <ul>
 <li>Releasen Sie eine Website mit GitHub Pages.</li>
-<li>Recherchieren Sie, wie eine Website mit GitHub Pages
-funktioniert.</li>
-<li>Als Resultat bekommen Sie eine URL, die öfffentlich erreichbar ist
-und den Inhalt der Datei index.html als Website darstellt.</li>
-<li>Achten Sie auf die Einträge bei “Actions”, um das Deployment
-nachzuvollziehen. Sie werden später ihre eigenen GitHub Actions
-erstellen.</li>
+<li>Recherchieren Sie, wie eine Website mit GitHub Pages funktioniert.</li>
+<li>Als Resultat bekommen Sie eine URL, die öfffentlich erreichbar ist und den Inhalt der Datei index.html als Website darstellt.</li>
+<li>Achten Sie auf die Einträge bei “Actions”, um das Deployment nachzuvollziehen. Sie werden später ihre eigenen GitHub Actions erstellen.</li>
 </ul>
 <h2 id="automatisierung">5. Automatisierung</h2>
 <ul>
-<li>Auf ihrer GitHub Pages Website soll diese README.md Datei ausgegeben
-werden.</li>
-<li>Schreiben Sie einen Prozess für die Konvertierung von Markdown in
-HTML, den Sie automatisiert ausführen können (PowerShell/Bash).
-Beispiel: <code>sh convert.sh</code> konvertiert die Datei README.md in
-HTML und erstellt die Datei index.html.</li>
-<li>Automatisieren Sie den Prozess. Das Ziel ist, dass nicht vergessen
-wird index.html zu updaten, wenn sich README.md ändert.</li>
+<li>Auf ihrer GitHub Pages Website soll diese README.md Datei ausgegeben werden.</li>
+<li>Schreiben Sie einen Prozess für die Konvertierung von Markdown in HTML, den Sie automatisiert ausführen können ( PowerShell/Bash). Beispiel: <code>sh convert.sh</code> konvertiert die Datei README.md in HTML und erstellt die Datei index.html.</li>
+<li>Automatisieren Sie den Prozess. Das Ziel ist, dass nicht vergessen wird index.html zu updaten, wenn sich README.md ändert.</li>
 </ul>
+<h2 id="add-changes">6. Add changes</h2>
+<ul>
+<li>Das ist ein grosser TEst</li>
+</ul>
+<h2 id="add-changes-1">7. add changes</h2>
 </body>
 </html>
