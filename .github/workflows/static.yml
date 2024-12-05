@@ -9,7 +9,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Pandoc
         run: sudo apt-get install -y pandoc
-      - name: chmod convert.sh
+      - name: Set working directory
+        run: cd ${{ github.workspace }}
+      - name: chmod
         run: chmod +x ./convert.sh
       - name: Run convert.sh
         run: ./convert.sh
@@ -18,7 +20,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git -C ${{ github.workspace }} add index.html
+          git add index.html
           git commit -m "Update index.html from README.md"
           git push
         env:
