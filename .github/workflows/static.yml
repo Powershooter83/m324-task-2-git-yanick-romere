@@ -14,7 +14,7 @@ jobs:
       - name: chmod
         run: chmod +x ./convert.sh
       - name: Run convert.sh
-        run: ./convert.sh
+        run: ls -la ./convert.sh
 
       - name: Commit and push changes
         run: |
