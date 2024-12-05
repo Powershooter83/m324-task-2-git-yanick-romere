@@ -15,11 +15,13 @@ jobs:
         run: |
           INPUT_FILE="README.md"
           OUTPUT_FILE="index.html"
+          echo "TEST"
 
           if [[ ! -f $OUTPUT_FILE ]] || [[ $INPUT_FILE -nt $OUTPUT_FILE ]]; then
               echo "RUN PANDOC"
               pandoc "$INPUT_FILE" -o "$OUTPUT_FILE" --metadata title="GitHub Pages" -s
           fi
+          echo "test2"
 
       - name: Show contents of index.html
         run: cat index.html
