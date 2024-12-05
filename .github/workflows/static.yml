@@ -2,28 +2,21 @@ name: GitHub Actions Runner
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [ push ]
 jobs:
-  Explore-GitHub-Actions:
+  Create-Page:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Run complete workflow
         uses: actions/checkout@v4
-      - name: Install Pandoc
-        run: sudo apt-get install -y pandoc
-      - name: Set working directory
-        run: cd ${{ github.workspace }}
-      - name: chmod
-        run: chmod +x ./convert.sh
-      - name: Run convert.sh
-        run: ls -la ./convert.sh
-      - name: Inspect changes to convert.sh
-        run: git diff convert.sh
-
-      - name: Commit and push changes
+      - name: Execute all steps
         run: |
+          sudo apt-get install -y pandoc
+          chmod +x ./convert.sh
+          ./convert.sh
+          git restore --source=HEAD --staged --worktree convert.sh
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Update index.html from README.md"
+          git commit -m "Update index.html from README.md" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
