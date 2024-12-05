@@ -7,28 +7,17 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
       - name: Install Pandoc
         run: sudo apt-get install -y pandoc
-
       - name: Generate index.html
         run: |
-          cd ${{ github.workspace }}
-          echo "TEST"
-
           pandoc README.md -o index.html --metadata title="GitHub Pages" -s
-          
-          echo "test2"
-
-      - name: Show contents of index.html
-        run: cat index.html
-
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Update index.html from README.md" || echo "No changes to commit"
+          git commit -m "Update index.html from README.md"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
