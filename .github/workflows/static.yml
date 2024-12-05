@@ -13,6 +13,7 @@ jobs:
 
       - name: Generate index.html
         run: |
+          cd ${{ github.workspace }}
           INPUT_FILE="README.md"
           OUTPUT_FILE="index.html"
           echo "TEST"
